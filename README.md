@@ -56,16 +56,6 @@ match app_config.get::<String>("optional_key") {
 }
 ```
 
-## API Reference
-
-### `Config::new(name: &str) -> Config`
-
-Creates a new configuration instance for the given name. The configuration is loaded from `configs/{name}.json` if not already cached.
-
-### `config.get<T: DeserializeOwned>(key: &str) -> Option<T>`
-
-Retrieves a configuration value by key, attempting to deserialize it into type `T`.
-
 ## Thread Safety
 
 The configuration manager is designed for concurrent access:
